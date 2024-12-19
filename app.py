@@ -19,6 +19,9 @@ def stream_data():
         yield word + " "
         time.sleep(0.02)
 
+if st.button("Introducción:"):
+    st.write_stream(stream_data)
+
 car_data = pd.read_csv('vehicles_us.csv')
 
 hist_button = st.button('Construir histograma')
